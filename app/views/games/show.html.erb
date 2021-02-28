@@ -1,4 +1,4 @@
-<h1>Game #<%= @game.id %></h1>
+<h1>Игра №<%= @game.id %></h1>
 
 <svg height="250" width="200" class="figure-container">
   <!-- Rod -->
@@ -27,6 +27,6 @@
 
 <%= form_with url: play_game_path(@game), id: 'play-form' do |f| %>
   <div class="form-group">
-    <%= f.text_field :letter, class: 'form-control', placeholder: 'Insert letter and press Enter' %>
+    <%= f.text_field :letter, class: 'form-control', placeholder: 'Нап. букву и нажми Enter' %>
   </div>
 <% end %>
