@@ -1,6 +1,8 @@
 class Game < ApplicationRecord
   TOTAL_ERRORS_ALLOWED = 7
 
+  # attr_accessor :game_finished
+
   belongs_to :word
 
   scope :sorted, -> { order(created_at: :desc) }
@@ -33,6 +35,7 @@ class Game < ApplicationRecord
   end
 
   def play!(letter)
+    letter = letter.upcase
     letter = normalize_letters(letter)
     if !over? && !guesses.include?(letter)
       guesses << letter
