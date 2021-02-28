@@ -1,0 +1,11 @@
+<p><%= word_to_show(game) %></p>
+
+<p>Ошибки (<span id="errors-made"><%= game.errors_made %></span>): <%= errors_to_show(game) %></p>
+
+<p>У вас осталось ошибок: <%= game.errors_allowed %></p>
+
+<% if game.won? %>
+  <p>Поздравляем, вы выиграли!</p>
+<% elsif game.lost? %>
+  <p>Вы проиграли, загаданное слово: <%= game.word.text %></p>
+<% end %>
