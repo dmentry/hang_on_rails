@@ -16,5 +16,18 @@ class GamesController < ApplicationController
   end
 
   def play
+    game = Game.find(params[:id])
+    game.play!(params[:letter])
+    game.save
+
+    # работаем с помощью хэпера respond_to с форматом json
+    respond_to do |format|
+      format.json do
+        render json: {
+          # значение json будет куском html, создается методом render_to_string (рендерится в строку)
+          current: render_to_string(partial: 'games/current', locals: { game: game }, formats: [:html])
+        }
+      end
+    end
   end
 end
