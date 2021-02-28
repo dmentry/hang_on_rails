@@ -1,8 +1,6 @@
 class Game < ApplicationRecord
   TOTAL_ERRORS_ALLOWED = 7
 
-  # attr_accessor :game_finished
-
   belongs_to :word
 
   scope :sorted, -> { order(created_at: :desc) }
