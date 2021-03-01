@@ -20,7 +20,7 @@ Rails 6.0.3
 ```yarn```
 
 ## Start server
-To start rails server
+To start rails server:
 
 ```bundle exec rails s```
 
@@ -28,6 +28,6 @@ To start rails server
 http://127.0.0.1:3000
 
 ## Add new words
-Now new words can be added into DB only manually via console
+Now new words can be added into DB only manually via console:
 
 ```bundle exec rails c```
