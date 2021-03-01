@@ -1,24 +1,28 @@
-# README
+# Hangman
+Guess the word before your man gets hung! This version is developed on Rails.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Try application
+https://hangmanrails.herokuapp.com
 
-Things you may want to cover:
+# System
+Ruby 2.7.2
 
-* Ruby version
+Rails 6.0.3
 
-* System dependencies
+# Installation
+```git clone git@github.com:dmentry/hangman_rails.git```
 
-* Configuration
+## Before run
+```bundle && bundle exec rake db:migrate```
 
-* Database creation
+```yarn```
 
-* Database initialization
+## Run locally server
+```bundle exec rails s```
 
-* How to run the test suite
+## Open in browser
+http://127.0.0.1:3000
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Add new words
+Now new words can be added into DB only manually via console
+```bundle exec rails c```
