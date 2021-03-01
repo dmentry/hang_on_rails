@@ -5,7 +5,7 @@
 <p>У вас осталось ошибок: <%= game.errors_allowed %></p>
 
 <% if game.won? %>
-  <p>Поздравляем, вы выиграли!</p>
+  <p id="win_text">Поздравляем, вы выиграли!</p>
 <% elsif game.lost? %>
   <p>Вы проиграли, загаданное слово: <%= game.word.text %></p>
 <% end %>
