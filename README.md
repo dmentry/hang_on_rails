@@ -15,6 +15,8 @@ git clone git@github.com:dmentry/hangman_rails.git
 ## Before run
 bundle && bundle exec rake db:migrate
 
+yarn
+
 ## Run locally server
 bundle exec rails s
 
