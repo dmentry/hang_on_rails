@@ -7,5 +7,5 @@
 <% if game.won? %>
   <p id="win_text">Поздравляем, вы выиграли!</p>
 <% elsif game.lost? %>
-  <p>Вы проиграли, загаданное слово: <%= game.word.text %></p>
+  <p id="lost_text">Вы проиграли, загаданное слово: <%= game.word.text %></p>
 <% end %>

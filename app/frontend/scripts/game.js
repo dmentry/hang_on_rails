@@ -12,7 +12,7 @@ $(document).ready(() => {
       }
     }
     // условия, когда нужно убрать поле ввода буквы
-    if ((errorsMade >= 7) || ($('#win_text').text())) {
+    if (($('#lost_text').text()) || ($('#win_text').text())) {
       $(`#play-form`).hide()
     }
   }
