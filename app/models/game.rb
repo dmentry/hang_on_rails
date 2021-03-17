@@ -3,7 +3,8 @@ class Game < ApplicationRecord
 
   belongs_to :word
 
-  scope :sorted, -> { order(created_at: :desc) }
+  scope :sorted_last_10, -> { order(created_at: :desc).last(10) }
+  scope :sorted_all, -> { order(created_at: :desc) }
 
   def errors_letters
     guesses - normalized_letters

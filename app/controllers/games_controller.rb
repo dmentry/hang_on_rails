@@ -12,7 +12,8 @@ class GamesController < ApplicationController
   end
 
   def index
-    @games = Game.sorted
+    @games = Game.sorted_all
+    @games_last_10 = Game.sorted_last_10
   end
 
   def play

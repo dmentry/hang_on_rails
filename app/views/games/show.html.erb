@@ -25,10 +25,14 @@
   <%= render 'current', game: @game %>
 </div>
 
+
 <%= form_with url: play_game_path(@game), id: 'play-form' do |f| %>
-  <div class="form-group">
-    <%= f.text_field :letter, class: 'form-control', autofocus: 'autofocus', placeholder: 'Введи букву и нажми Enter' %>
+<div class="form-row">
+  <div class="form-group field-width">
+    <%= f.text_field :letter, class: 'form-control', autofocus: 'autofocus' %>
+  </div>
   </div>
 <% end %>
+
 
 <%= link_to 'На главную', root_path, class: 'btn btn-primary' %>

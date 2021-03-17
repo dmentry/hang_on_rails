@@ -1,10 +1,12 @@
 <%= image_pack_tag 'hangman.jpg', size: '200x200', alt: 'Виселица' %>
 <h1>Виселица</h1>
 
-<ul>
-<!--   <#%= render @games %>  -->
-</ul>
-
 <div class="mt-3">
   <%= button_to 'Новая игра', games_path, method: :post, class: 'btn btn-primary' %>
 </div>
+
+<div class="mt-3">Последние 10 игр:</div>
+
+<ul>
+  <%= render @games_last_10 %>
+</ul>
